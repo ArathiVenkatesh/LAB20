@@ -1,13 +1,7 @@
-FROM openjdk:17
+FROM eclipse-temurin:17-jdk
 
-# Set working directory
 WORKDIR /app
 
-# Copy all project files
-COPY . .
+COPY target/lab20-1.0-SNAPSHOT.jar app.jar
 
-# Run Maven build (includes tests)
-RUN mvn clean package
-
-# Run application (optional)
-CMD ["java", "-cp", "target/lab20-1.0-SNAPSHOT.jar", "com.bnmit.Calculator"]
+CMD ["java", "-cp", "app.jar", "com.bnmit.Calculator"]
