@@ -18,7 +18,7 @@ public class Calculator {
         return a / b;
     }
 
-    // ✅ ADD THIS MAIN METHOD
+    // ✅ REQUIRED FOR DOCKER
     public static void main(String[] args) {
         Calculator calc = new Calculator();
 
